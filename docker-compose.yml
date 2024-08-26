@@ -1,0 +1,30 @@
+services:
+  app:
+    container_name: png-generator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # expose:
+    #    - "9527"
+    ports:
+       - "9543:9543"
+    networks:
+      - service-network
+    volumes:
+      - ./:/deploy
+    environment:
+      - TZ=Asia/Taipei
+    working_dir: /deploy
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        pytest -v
+        python main.py
+
+networks:
+  service-network:
+    name: service-network
+    driver: bridge
+#    external: true
+
