@@ -7,7 +7,7 @@
 
 ## 環境準備
 
-1. **Docker 和 Docker Compose:** 確認你的系統裡有安裝 Docker 和 Docker Compose。如果沒有，推薦直接安裝 Docker Desktop：
+1. **Docker 和 Docker Compose:** 確認系統裡有安裝 Docker 和 Docker Compose。如果沒有，推薦直接安裝 Docker Desktop：
     - macOS： [Docker Desktop on Mac 官方安裝檔下載](https://docs.docker.com/desktop/install/mac-install/)
     - Windows： [Docker Desktop on Windows 官方安裝檔下載](https://docs.docker.com/desktop/install/windows-install/)
 
