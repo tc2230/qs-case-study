@@ -3,7 +3,7 @@
 
 ## 概述
 
-簡單的 Flask API server 實做，搭配 Google Cloud Logging 做記錄功能。
+Flask API server 實做，搭配 Google Cloud Logging 做記錄功能。
 
 ## 環境準備
 
