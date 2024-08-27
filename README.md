@@ -12,7 +12,7 @@
     - Windows： [Docker Desktop on Windows 官方安裝檔下載](https://docs.docker.com/desktop/install/windows-install/)
 
 2. **安裝完成後，啟動 Docker Desktop，可於介面左下角確認 Docker Engine 正常執行。如下圖：**
-![image](https://hackmd.io/_uploads/rJ1JF_joR.png)
+    ![image](https://github.com/user-attachments/assets/67ea61fc-8d75-43c9-bab7-3a6ccb0ea3ea)
 
 3. **可用的 port**: 確保你的系統上 port **9543** 處於可用狀態。也可以自行修改 `docker-compose.yml` 和 `main.py` 中的port number，兩者一致即可。
 
@@ -34,8 +34,7 @@
     - Notice: 需開啟 Cloud logging 與 Measurement protocol 寫入權限
 
 4. **確認正常啟動:** 執行上述命令後，應該會在terminal會看到 pytest 的測試結果，以及 API 正在監聽請求的訊息。如下圖：
-
-   ![Docker Compose 啟動](https://hackmd.io/_uploads/rkPOiwjsR.png)
+    ![image](https://github.com/user-attachments/assets/1d073d74-57f8-4625-a3e9-1c28c5a75e7d)
 
 ## 測試 API
 
