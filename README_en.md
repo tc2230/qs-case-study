@@ -10,7 +10,9 @@ This project demonstrates a simple Flask API server integrated with Google Cloud
 - MacOS: [Docker Desktop installation on MacOS](https://docs.docker.com/desktop/install/mac-install/)
 - Windows: [Docker Desktop installation on Windows](https://docs.docker.com/desktop/install/windows-install/)
 
-2. **Start Docker Desktop after installation, and make sure that Docker Engine is running.**
+2. **After installation, start Docker Desktop. You can confirm that Docker Engine is running correctly in the lower left corner of the interface, as shown below:**
+![image](https://hackmd.io/_uploads/rJ1JF_joR.png)
+
 3. **Available Port:** Make sure port **9543** is available on your machine. If not, modify the port number in `docker-compose.yml` and `main.py`.
 
 ## Deployment

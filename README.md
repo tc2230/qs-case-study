@@ -11,7 +11,9 @@
     - macOS： [Docker Desktop on Mac 官方安裝檔下載](https://docs.docker.com/desktop/install/mac-install/)
     - Windows： [Docker Desktop on Windows 官方安裝檔下載](https://docs.docker.com/desktop/install/windows-install/)
 
-2. **安裝完成後，啟動 Docker Desktop，並確認 Docker Engine 正常執行。**
+2. **安裝完成後，啟動 Docker Desktop，可於介面左下角確認 Docker Engine 正常執行。如下圖：**
+![image](https://hackmd.io/_uploads/rJ1JF_joR.png)
+
 3. **可用的 port**: 確保你的系統上 port **9543** 處於可用狀態。也可以自行修改 `docker-compose.yml` 和 `main.py` 中的port number，兩者一致即可。
 
 ## 部署
