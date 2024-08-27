@@ -7,7 +7,6 @@ from PIL import Image
 from app.forms import ImageDimension
 from app.logger import setup_logger, send_ga_record
 from flask import Blueprint, send_file, request, abort, Response
-from flask import current_app
 
 routes = Blueprint('routes', __name__)
 logger = setup_logger()
@@ -65,6 +64,7 @@ def log_expected_response(response):
                 'content_type': response.content_type, 
             }
         }
+        logger.log_struct(log_entry)
     return response
 
 @routes.route('/generate_png', methods=['GET'])
@@ -87,8 +87,10 @@ def generate_png():
         img_io = io.BytesIO()
         img.save(img_io, 'PNG')
         img_io.seek(0)
-        # raise ValueError('test')
         return send_file(img_io, mimetype='image/png')
     except Exception as e:
-        logger.log_struct({"detail": ''.join(traceback.format_exception(type(e), e, e.__traceback__))}) 
+        logger.log_struct({
+            'severity': 'ERROR', 
+            "detail": ''.join(traceback.format_exception(type(e), e, e.__traceback__))
+            })
         abort(Response('internal server error', 500))

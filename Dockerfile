@@ -4,5 +4,5 @@ RUN mkdir /deploy
 COPY ./ /deploy/
 WORKDIR /deploy
 
-RUN apt-get update && apt-get install -y nano git curl wget
+RUN apt-get update && apt-get install -y nano git curl
 RUN pip install -r requirements.txt

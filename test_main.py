@@ -1,6 +1,7 @@
 import pytest
 from app import create_app
 import json
+
 class TestGeneratePNG():
     base_url = "/generate_png"
     
