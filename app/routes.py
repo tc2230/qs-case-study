@@ -5,7 +5,7 @@ import datetime
 import traceback
 from PIL import Image
 from app.forms import ImageDimension
-from app.logger import setup_logger
+from app.logger import setup_logger, send_ga_record
 from flask import Blueprint, send_file, request, abort, Response
 from flask import current_app
 
