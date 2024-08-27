@@ -26,7 +26,7 @@ Flask API server 實做，搭配 Google Cloud Logging 做記錄功能。
 
 2. **建立映像並執行主程式:** 切換到專案目錄，並執行以下命令來建立Image和啟動API sercice：
    ```bash
-   docker-compose up
+   docker compose up
    ```
     Docker compose 會自動建立image、啟動container和API 服務。如果想要背景執行，可以在command最後加入參數 `-d` 。
 
