@@ -14,7 +14,7 @@
 2. **安裝完成後，啟動 Docker Desktop，可於介面左下角確認 Docker Engine 正常執行。如下圖：**
     ![image](https://github.com/user-attachments/assets/67ea61fc-8d75-43c9-bab7-3a6ccb0ea3ea)
 
-3. **可用的 port**: 確保你的系統上 port **9543** 處於可用狀態。也可以自行修改 `docker-compose.yml` 和 `main.py` 中的port number，兩者一致即可。
+3. **可用的 port**: 確保系統上 port **9543** 處於可用狀態。也可以自行修改 `docker-compose.yml` 和 `main.py` 中的port number，兩者一致即可。
 
 ## 部署
 
@@ -45,7 +45,7 @@
      - `width`: png 寬度。
      - `height`: png 高度。
 
-2. **測試工具:** 可以直接使用瀏覽器如chrome訪問範例Endpoint (http://localhost:9543/generate_png?width=100&height=100)，或使用像 [Postman](https://www.postman.com/downloads/) 等工具進行測試，用 curl 的話也 ok，如下：
+2. **測試工具:** 可以直接使用瀏覽器如chrome訪問範例Endpoint (http://localhost:9543/generate_png?width=100&height=100)，或使用像 [Postman](https://www.postman.com/downloads/) 等工具進行測試，用 curl 的話也 ok，如：
       ```bash
        curl -o output.png "http://localhost:9543/generate_png?width=100&height=100"
       ```
