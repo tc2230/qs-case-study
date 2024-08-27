@@ -33,7 +33,38 @@ def log_expected_response(response):
             'content_type': response.content_type, 
         }
     }
+    # google cloud logginf
     logger.log_struct(log_entry)
+    
+    # GA measurement protocol
+    payload = {
+        "client_id": "taylor.fu.dev",
+        "events": [
+            {
+                "name": "test-event",
+                "params": {
+                    "event_id": "google_1234",
+                    "campaign": "Summer_fun",
+                    "source": "dev",
+                    "term": "api+png",
+                    "content": "image",
+                    "session_id": "123",
+                }
+            },
+        ]
+    }
+
+    ga_response = send_ga_record(payload)
+    if ga_response.status_code != 200:
+        log_entry = {
+            'severity': 'WARNING',
+            'ga_response': {
+                'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
+                'status_code': response.status_code,
+                'content_length': response.content_length, 
+                'content_type': response.content_type, 
+            }
+        }
     return response
 
 @routes.route('/generate_png', methods=['GET'])

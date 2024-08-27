@@ -8,6 +8,9 @@ services:
     #    - "9527"
     ports:
        - "9543:9543"
+    environment:
+      - MEASUREMENT_ID=${MEASUREMENT_ID}
+      - API_SECRET=${API_SECRET}
     networks:
       - service-network
     volumes:

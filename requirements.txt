@@ -3,3 +3,4 @@ flask_wtf==1.2.1
 pillow==10.4.0
 pytest==8.3.2
 google-cloud-logging
+python-dotenv
