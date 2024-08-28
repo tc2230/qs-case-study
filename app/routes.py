@@ -59,9 +59,7 @@ def log_expected_response(response):
             'severity': 'WARNING',
             'ga_response': {
                 'timestamp': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), 
-                'status_code': response.status_code,
-                'content_length': response.content_length, 
-                'content_type': response.content_type, 
+                'status_code': ga_response.status_code,
             }
         }
         logger.log_struct(log_entry)
